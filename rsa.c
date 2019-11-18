@@ -179,7 +179,7 @@ char * decrypt(char * str, struct private_key Priv)
 {
 	unsigned long long buf[MAX_SIZE_MESSAGE];
 	memset(buf,0,MAX_SIZE_MESSAGE);
-	int i,j, len =strlen(str);
+	int i,j;
 	unsigned long long r,temp;
 	unsigned long long ret=1;
 	char * ptr1, * ptr2;
@@ -225,24 +225,12 @@ int main()
 	PRIV_KEY.d1 = d;
 	PUBLIC_KEY.n2 = n;
 	PUBLIC_KEY.e2 = e;
-
 	
-	
-	
-	char *str1,*str2;
-	
-	
-	
-	
+	char *str1,*str2;	
 	
 	str1 = encrypt("tran triet rat dep trai",PUBLIC_KEY);
-	str2 = decrypt(str1,PRIV_KEY);
-
-	printf("n: %d\n",n);
-	printf("d: %d\n",d);
-	printf("n: %d\n",n);
-	printf("e: %d\n",e);
 	printf("\n_%s_\n",str1);
+	str2 = decrypt(str1,PRIV_KEY);
 	printf("\n_%s_\n",str2);
 
   	return 0;
