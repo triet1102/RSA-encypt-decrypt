@@ -226,24 +226,10 @@ int main()
 	PUBLIC_KEY.n2 = n;
 	PUBLIC_KEY.e2 = e;
 
-	
-	
-	
-	char *str1,*str2;
-	
-	
-	
-	
-	
+	char *str1,*str2;	
 	str1 = encrypt("tran triet rat dep trai",PUBLIC_KEY);
-	str2 = decrypt(str1,PRIV_KEY);
-
-	printf("n: %d\n",n);
-	printf("d: %d\n",d);
-	printf("n: %d\n",n);
-	printf("e: %d\n",e);
 	printf("\n_%s_\n",str1);
-	printf("\n_%s_\n",str2);
+	str2 = decrypt(str1,PRIV_KEY);
 
   	return 0;
 }
